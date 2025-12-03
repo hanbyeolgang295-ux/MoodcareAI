@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodCare AI 🎧</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Chart.js (도넛 그래프) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="title">MoodCare AI 🎵</h1>
+    <p class="subtitle">당신의 감정을 듣고, 위로하고, 음악으로 치유해주는 서비스</p>
+
+    <!-- 입력 영역 -->
+    <div class="input-area">
+      <input id="userInput" type="text" placeholder="지금 기분이 어떤가요?" />
+      <button id="sendBtn">분석하기</button>
+    </div>
+
+    <!-- 로딩 애니메이션 -->
+    <div id="loading" class="loading hidden">
+      <div class="pulse"></div>
+      <p>당신의 마음을 읽고 있어요…</p>
+    </div>
+
+    <!-- 감정 결과 -->
+    <div id="result" class="result-box"></div>
+
+    <!-- 응원 메시지 -->
+    <div id="encouragementBox" class="encourage-box"></div>
+
+    <!-- 음악 추천 -->
+    <h2 class="section-title">🎧 추천 음악</h2>
+    <div id="music-container" class="music-list"></div>
+
+    <!-- 감정 히스토리 -->
+    <h2 class="section-title">📊 지난 7일 감정 기록</h2>
+    <canvas id="emotionChart" width="300" height="300"></canvas>
+
+    <!-- 결과 박스 -->
+    <div id="result" class="result-box"></div>
+     
+    <!-- 오늘의 조언 -->
+    <div id="adviceBox" class="encourage-box"></div>
+
+    <!-- 주간 응원 메시지 -->
+    <div id="encouragementBox" class="encourage-box"></div>
+
+    <!-- 추천 음악 -->
+    <h2 class="section-title">🎧 추천 음악</h2>
+    <div id="music-container" class="music-list"></div>
+
+    <!-- 지난 7일 감정 도넛 차트 -->
+    <h2 class="section-title">📊 지난 7일 감정 기록</h2>
+    <canvas id="emotionChart"></canvas>
+
+    <!-- 일별 스트레스 트렌드 차트 -->
+    <h2 class="section-title">📈 일별 스트레스 추세</h2>
+    <canvas id="trendChart"></canvas>
+
+    <!-- 감정 일기 -->
+    <h2 class="section-title">📘 감정 일기</h2>
+    <button id="saveDiaryBtn" class="diary-btn">오늘 감정 일기 저장하기</button>
+    <div id="diaryList" class="diary-list"></div>
+
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
